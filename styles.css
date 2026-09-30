@@ -189,7 +189,7 @@ body.is-scrolled .nav-shell {
 
 body.is-scrolled .brand,
 body.is-scrolled .brand-copy { display: none; }
-body.is-scrolled .nav-toggle { display: block; pointer-events: auto; box-shadow: var(--shadow-tight); }
+body.is-scrolled .nav-toggle { display: block; pointer-events: auto; background: var(--color-footer-panel); border-color: var(--color-footer-rule); color: var(--color-footer-ink); box-shadow: 0 16px 38px var(--color-footer-glow); }
 body.is-scrolled .nav-links { display: none; }
 
 body.menu-open { overflow: hidden; }
@@ -204,10 +204,10 @@ body.menu-open .nav-toggle {
   display: block;
   width: 48px;
   height: 48px;
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-surface);
-  box-shadow: var(--shadow-panel);
+  background: var(--color-footer-panel);
+  border-color: var(--color-footer-rule);
+  color: var(--color-footer-ink);
+  box-shadow: 0 16px 38px var(--color-footer-glow);
   pointer-events: auto;
 }
 body.menu-open .nav-toggle span { opacity: 0; }
@@ -223,7 +223,7 @@ body.menu-open .nav-links {
   justify-items: start;
   gap: clamp(12px, 2vw, 22px);
   padding: clamp(112px, 15vh, 150px) clamp(24px, 9vw, 150px) clamp(48px, 8vh, 88px);
-  background: var(--color-background);
+  background: var(--color-footer-bg);
   opacity: 0;
   transform: translateY(-8px);
   animation: menuReveal 260ms var(--ease-out) forwards;
@@ -237,6 +237,7 @@ body.menu-open .nav-links::before {
   width: clamp(82px, 12vw, 132px);
   aspect-ratio: 1.8 / 1;
   background: url('assets/dibs_logo.png') center / contain no-repeat;
+  filter: drop-shadow(0 16px 36px var(--color-footer-glow));
   pointer-events: none;
 }
 body.menu-open .nav-links a {
@@ -246,7 +247,7 @@ body.menu-open .nav-links a {
   justify-content: flex-start;
   border-radius: 0;
   background: transparent;
-  color: var(--color-ink);
+  color: var(--color-footer-ink);
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 7vw, 5.8rem);
   font-weight: 700;
