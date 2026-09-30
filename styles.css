@@ -234,13 +234,30 @@ body.menu-open .nav-links::before {
   position: fixed;
   top: clamp(18px, 4vw, 34px);
   left: clamp(20px, 5vw, 56px);
+  z-index: 2;
   width: clamp(82px, 12vw, 132px);
   aspect-ratio: 1.8 / 1;
   background: url('assets/dibs_logo.png') center / contain no-repeat;
   filter: drop-shadow(0 16px 36px var(--color-footer-glow));
   pointer-events: none;
 }
+body.menu-open .nav-links::after {
+  content: 'DIBS';
+  position: fixed;
+  right: -0.16em;
+  bottom: -0.26em;
+  z-index: 0;
+  color: color-mix(in oklch, var(--color-footer-ink) 7%, transparent);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 30vw, 24rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  pointer-events: none;
+}
 body.menu-open .nav-links a {
+  position: relative;
+  z-index: 1;
   width: min(100%, 660px);
   min-height: auto;
   padding: 0;
